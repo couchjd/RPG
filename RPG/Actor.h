@@ -37,23 +37,23 @@ enum Class {
 
 class Actor {
 public:
-	Stat* strength;
-	Stat* intelligence;
-	Stat* wisdom;
-	Stat* constitution;
-	Stat* dexterity;
-	Stat* charisma;
+	Stat m_str;
+	Stat m_int;
+	Stat m_wis;
+	Stat m_con;
+	Stat m_dex;
+	Stat m_cha;
 	
-	Class ch_class;
-	Race race;
-	ArmorType armor;
+	Class m_class;
+	Race m_race;
+	ArmorType m_equipped_armor;
 	
-	int AC;
-	int DC;
-	int HP_max;
-	int HP_curr;
-	int level;
-	int hit_die;
+	int m_armor_class;
+	int m_spell_save_dc;
+	int m_HP_max;
+	int m_HP_curr;
+	int m_level;
+	int m_hit_die;
 
 	void attack(Actor& target);
 	Actor();
