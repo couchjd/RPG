@@ -68,5 +68,7 @@ private:
 	void getHitDice();
 	void calcAC();
 	void raceMod();
+	void classMod();
+	void backgroundMod();
 };
 

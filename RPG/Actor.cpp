@@ -16,6 +16,7 @@ Actor::Actor() {
 	getHitDice();
 	rollStats();
 	raceMod();
+	classMod();
 	calcAC();
 	initHP();
 }
@@ -149,6 +150,25 @@ void Actor::raceMod() {
 			m_dex.update(2);
 			break;
 	}
+}
+
+void Actor::classMod() {
+	switch(m_class) {
+		case FIGHTER:
+			break;
+		case WIZARD:
+			break;
+		case CLERIC:
+			break;
+		case ROGUE:
+			break;
+		default:
+			break;
+	}
+}
+
+void Actor::backgroundMod() {
+
 }
 
 void Actor::rollStats() {

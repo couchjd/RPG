@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
+    <ClInclude Include="Backgrounds.h" />
     <ClInclude Include="Die.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Stat.h" />
