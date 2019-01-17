@@ -1,6 +1,7 @@
 #pragma once
 #include "Stat.h"
 #include "Die.h"
+#include "Race.h"
 #include <iostream>
 #include <math.h>
 
@@ -18,14 +19,6 @@ enum ArmorType {
 	PLATE,
 	CHAIN_MAIL,
 	SPLINT
-};
-
-enum Race {
-	HUMAN,
-	ELF,
-	DWARF,
-	GNOME,
-	HALFLING
 };
 
 enum Class {
@@ -68,6 +61,7 @@ private:
 	void getHitDice();
 	void calcAC();
 	void raceMod();
+	void calcStats();
 	void classMod();
 	void backgroundMod();
 };

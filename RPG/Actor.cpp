@@ -10,7 +10,7 @@ Actor::Actor() {
 	///TEST VALUES
 	m_level = 20;
 	m_class = FIGHTER;
-	m_race = DWARF;
+	m_race = HALF_ELF;
 	///
 
 	getHitDice();
@@ -62,6 +62,7 @@ void Actor::initHP() {
 	for(int x = 1; x < m_level; ++x) {
 		m_HP_max += rollHP();
 	}
+	m_HP_curr = m_HP_max;
 }
 
 int Actor::rollHP() {
@@ -128,28 +129,22 @@ void Actor::calcAC() {
 }
 
 void Actor::raceMod() {
-	switch(m_race) {
-		case HUMAN:
-			m_str.update(1);
-			m_int.update(1);
-			m_wis.update(1);
-			m_dex.update(1);
-			m_con.update(1);
-			m_cha.update(1);
-			break;
-		case ELF:
-			m_dex.update(2);
-			break;
-		case DWARF:
-			m_con.update(2);
-			break;
-		case GNOME:
-			m_int.update(2);
-			break;
-		case HALFLING:
-			m_dex.update(2);
-			break;
-	}
+	m_str.m_score += m_race.str_mod;
+	m_int.m_score += m_race.int_mod;
+	m_wis.m_score += m_race.wis_mod;
+	m_con.m_score += m_race.con_mod;
+	m_dex.m_score += m_race.dex_mod;
+	m_cha.m_score += m_race.cha_mod;
+	calcStats();
+}
+
+void Actor::calcStats() {
+	m_str.calcBonus();
+	m_int.calcBonus();
+	m_wis.calcBonus();
+	m_con.calcBonus();
+	m_dex.calcBonus();
+	m_cha.calcBonus();
 }
 
 void Actor::classMod() {
@@ -168,7 +163,6 @@ void Actor::classMod() {
 }
 
 void Actor::backgroundMod() {
-
 }
 
 void Actor::rollStats() {

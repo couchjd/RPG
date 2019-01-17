@@ -117,15 +117,23 @@
   <ItemGroup>
     <ClInclude Include="Actor.h" />
     <ClInclude Include="Backgrounds.h" />
+    <ClInclude Include="CharClass.h" />
     <ClInclude Include="Die.h" />
+    <ClInclude Include="Languages.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Race.h" />
+    <ClInclude Include="Skill.h" />
     <ClInclude Include="Stat.h" />
+    <ClInclude Include="Tools.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="Backgrounds.cpp" />
+    <ClCompile Include="CharClass.cpp" />
     <ClCompile Include="Die.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Race.cpp" />
     <ClCompile Include="Stat.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

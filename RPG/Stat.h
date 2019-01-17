@@ -9,7 +9,7 @@ public:
 	void update(const int& modifier);
 	int m_score;
 	int m_bonus;
-
-private:
 	void calcBonus();
+private:
+	
 };
