@@ -1,0 +1,46 @@
+#pragma once
+
+enum ArtisanTools {
+	ALCHEMIST,
+	BREWER,
+	CALLIGRAPHER,
+	CARPENTER,
+	CARTOGRAPHER,
+	COBBLER,
+	COOK,
+	GLASSBLOWER,
+	JEWLER,
+	LEATHERWORKER,
+	MASON,
+	PAINTER,
+	POTTER,
+	SMITH,
+	TINKER,
+	WEAVER,
+	WOODCARVER,
+};
+
+enum GamingSets {
+	DICE,
+	PLAYING_CARDS
+};
+
+enum MusicalInstruments {
+	BAGPIPES,
+	DRUM,
+	DULCIMER,
+	FLUTE,
+	LUTE,
+	LYRE,
+	HORN,
+	PAN_FLUTE,
+	SHAWM,
+	VIOL
+};
+
+enum OtherTools {
+	NAVIGATOt,
+	THIEVES_TOOLS,
+	LAND_VEHICLES,
+	WATER_VEHICLES
+};
